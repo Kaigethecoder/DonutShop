@@ -1,0 +1,24 @@
+<p>cartdisplay works!</p>
+
+<h1>Cart</h1>
+<table>
+  <thead>
+    <tr>
+      <td>Donut Name</td>
+      <td>Donut Calories</td>
+      <td> Donut Price</td>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let currDonut of thisCart">
+    <td>{{ currDonut.name }}</td>
+    <td>{{ currDonut.calories}}</td>
+    <td>$1.00</td>
+    <td><button class="btn-primary btn-danger" (click)="removeFromCart(currDonut.id)">Remove From Cart</button></td>
+  </tr>
+    </tbody>
+</table>
+
+<h2>Total Calories: {{getTotalCalories()}}</h2>
+
+<h3> Cart Total: {{ thisCart.length | currency }} </h3>

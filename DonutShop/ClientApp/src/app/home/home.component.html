@@ -1,0 +1,42 @@
+<h1>Welcome to Donut World!</h1>
+<p> List of donuts:</p>
+<br />
+<br />
+
+
+<table>
+  <thead>
+    <tr>
+      <td>Donut ID</td>
+      <td>Donut Name</td>
+      <td> Donut Photo</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let currDonut of donutList">
+      <td>{{ currDonut.id}}</td>
+      <td><a [routerLink]="['donutdetails/', currDonut.id]">{{ currDonut.name}}</a></td>
+      <td><a href="{{ currDonut.photo_attribution }}"><img style="width:150px;" src="{{ currDonut.photo }}" /></a></td>
+
+
+    </tr>
+  </tbody>
+
+
+
+
+</table>
+
+
+<!--export class Donut {
+  public id: number = 0;
+  public ref: string = "";
+  public name: string = "";
+  public photo: string = "";
+  public photo_attribution: string = "";
+}
+
+export class DonutApiResponse {
+  public count: number = 0;
+  public results: Donut[] = [];
+}-->

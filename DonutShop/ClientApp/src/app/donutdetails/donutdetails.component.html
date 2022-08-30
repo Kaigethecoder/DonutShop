@@ -1,0 +1,5 @@
+<h1> {{ourDonut.name}} Donut Details</h1>
+<img style="width:225px;" src="{{ourDonut.photo}}"/>
+<p>Calories: {{ourDonut.calories}}</p>
+<p> Extras: {{ourDonut.extras}}</p>
+<button class="btn-primary" (click)="addDonutToCart(ourDonut.id)"> Add To cart</button>
